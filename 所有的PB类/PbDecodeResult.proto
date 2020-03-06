@@ -1,0 +1,13 @@
+message PbDecodeResult {
+//请求是否成功
+required bool IsSuccess  = 1;
+
+//请求失败消息
+optional string ErrorMessage  = 2;
+
+optional string Result  = 3;
+
+optional string Type  = 4;
+
+optional string Url  = 5;
+}

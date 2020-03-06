@@ -1,0 +1,6 @@
+message PbKeyValue {
+//是否成功
+required string Key = 1;
+required string Value = 2;
+
+}

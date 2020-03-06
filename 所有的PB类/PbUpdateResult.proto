@@ -1,0 +1,34 @@
+message PbUpdateResult {
+//版本号
+optional int32 VersionCode =1;
+
+//版本号
+optional string VersionName =2;
+
+//更新内容
+repeated string UpdateMessage = 3;
+
+//apk下载地址
+optional string Url = 4;
+
+//apk包MD5值
+optional string MD5 = 5;
+
+//是否强制更新
+optional bool IsForced = 6;
+
+//安装包名称
+optional string FileName=7;
+
+//apk发布日期
+optional string ReleaseDate  = 8;
+
+//请求是否成功
+required bool IsSuccess  = 9;
+
+//请求失败消息
+optional string ErrorMessage  = 10;
+
+//循环冗余检查
+optional string CRC  = 11;
+}

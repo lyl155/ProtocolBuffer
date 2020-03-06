@@ -1,0 +1,10 @@
+message PbFeedbackResult {
+//是否成功
+required bool IsSuccess =1;
+
+//异常信息
+optional string ErrorMessage = 2;
+
+//图片地址
+optional string Url =3;
+}

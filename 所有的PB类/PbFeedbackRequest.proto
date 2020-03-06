@@ -1,0 +1,50 @@
+message PbFeedbackRequest {
+
+//手机IMEI
+required string IMEI = 1;
+
+//应用包名
+required string PackageName=2;
+
+//平台
+required string SystemName=3;
+
+//系统版本号
+required string SystemVersion=4;
+
+//版本号
+required int32 VersionCode=5;
+
+//版本名
+optional string VersionName=6;
+
+//多语言
+optional string Language=7;
+
+//手机厂商
+optional string DeviceBrand=8;
+
+//Android 设备的CPU类型(通常称为”ABIs”)
+optional string ABIs=9;
+
+//反馈人电话号码
+required string Phone=10;
+
+//反馈时间
+required string Date  = 11;
+
+//选择多选框的反馈问题
+repeated string ChkQuestions = 12;
+
+//写在文本框的反馈问题
+optional string TvQuestion=13;
+
+//用户手机默认的语言(非程序设置语言)
+optional string DefaultLanguage=14;
+
+//用户手机区域
+optional string DefaultCountry=15;
+
+//反馈图片url
+optional string ImageUrl=16;
+}

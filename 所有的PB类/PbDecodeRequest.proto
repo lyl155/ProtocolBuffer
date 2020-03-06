@@ -1,0 +1,11 @@
+message PbDecodeRequest {
+required string IMEI =1;
+
+repeated bytes Decodes = 2;
+
+optional double Latitude=3;
+
+optional double Longitude=4;
+
+optional string code=5;
+}

@@ -1,0 +1,6 @@
+message PbCameraParameterRequest {
+//版本号
+required int32 OsVersionCode =1;
+//姓名
+required string DeviceId =2;
+}

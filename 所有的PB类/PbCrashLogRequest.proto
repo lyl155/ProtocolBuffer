@@ -1,0 +1,8 @@
+message PbCrashLogRequest {
+//手机IMEI
+required string IMEI = 1;
+
+repeated bytes Files=2;
+
+repeated string FileNames = 3;
+}

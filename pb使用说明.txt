@@ -1,0 +1,45 @@
+﻿href:
+https://blog.csdn.net/sylar_d/article/details/51325987
+
+双击gen.bat，从cs文件夹将文件复制到Models下
+
+
+更新Message的原则：
+1、不可以修改已存在域中的tag
+2、所有新增添的域必须是 optional 或者 repeated
+3、非required域可以被删除。但是这些被删除域的tag不可以被重用。所以我们需要将其添加至reserved中，防止被意外使用。
+其他：略
+
+
+Field：
+required: message中必须至少包含一个required域，并且在序列化之前必须被赋值。
+optional: message中需要包含0个以上optional域。
+repeated：这个域用来保存一些要重复设置的变量，这些变量可以设置0次到多次。并且顺序保存。（用于设置数组）。
+
+optional域和默认值
+我们在上面提到，message中的元素可以用optional域来描述。一个message可以包含0个或者多个opational域。
+在解析message时，如果不存在optional域那么就会用默认值来替代，如果没有设置默认值。那么就用系统的默认值替代。
+protobuf设计了很多默认值，比如：string的默认值是空，bool默认值是false，对于数来说所有的默认值都是0。
+对于所有的枚举类型，默认值均为第一个枚举值。设置optional域默认值的语法是：
+optional int32 restult_per_page = 3 [default = 10];
+
+
+数据类型： 
+.proto中的类型	注意	                                                        C++中类型	java中类型
+double		                                                                double	        double
+float		                                                                float		float
+int32	        自动调整编码长度，如果需要保存负数，请使用sint32	        int32		int
+int64	        自动调整编码长度，如果需要保存负数，请使用sint64                int64		long
+uint32	        自动调整编码长度	                                        uint32		int  
+uint64	        自动调整编码长度	                                        uint64		long
+sint32          自动调整编码长度，表示有符号数，负数的编码效率高于int32		int32		int
+sint64          自动调整编码长度，表示有符号数，负数的编码效率高于int64		int64		long
+fixed32	        固定使用4bytes编码，在编码大数(228228)的时候比uint32更有效率	int32		int
+fixed32	        固定使用8bytes编码，在编码大数(256256)的时候比uint64更有效率	int42		long
+sfixed32	固定使用4bytes编码	                                        int32		int
+sfixed64	固定使用8bytes编码                                         	int64		long
+bool		                                                                bool		boolean
+string     	string只能包含UTF-8和7-bit ASCII文本	                        string		String
+bytes	        包含任意长度的bytes	                                        string		ByteString
+
+

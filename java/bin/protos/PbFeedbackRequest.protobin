@@ -1,0 +1,25 @@
+
+§
+protos/PbFeedbackRequest.proto"Å
+PbFeedbackRequest
+IMEI (	RIMEI 
+PackageName (	RPackageName
+
+SystemName (	R
+SystemName$
+SystemVersion (	RSystemVersion 
+VersionCode (RVersionCode 
+VersionName (	RVersionName
+Language (	RLanguage 
+DeviceBrand (	RDeviceBrand
+ABIs	 (	RABIs
+Phone
+ (	RPhone
+Date (	RDate"
+ChkQuestions (	RChkQuestions
+
+TvQuestion (	R
+TvQuestion(
+DefaultLanguage (	RDefaultLanguage&
+DefaultCountry (	RDefaultCountry
+ImageUrl (	RImageUrl

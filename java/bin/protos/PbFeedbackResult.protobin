@@ -1,0 +1,7 @@
+
+‡
+protos/PbFeedbackResult.proto"f
+PbFeedbackResult
+	IsSuccess (R	IsSuccess"
+ErrorMessage (	RErrorMessage
+Url (	RUrl

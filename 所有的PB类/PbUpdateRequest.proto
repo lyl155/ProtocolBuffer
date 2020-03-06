@@ -1,0 +1,29 @@
+message PbUpdateRequest {
+//手机IMEI
+required string IMEI = 1;
+
+//应用包名
+required string PackageName=2;
+
+//平台
+required string SystemName=3;
+
+//系统版本号
+required string SystemVersion=4;
+
+//版本号
+required int32 VersionCode=5;
+
+//版本号
+
+optional string VersionName=6;
+
+//多语言
+optional string Language=7;
+
+//手机厂商
+optional string DeviceBrand=8;
+
+//Android 设备的CPU类型(通常称为”ABIs”)
+optional string ABIs=9;
+}
